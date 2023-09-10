@@ -1,0 +1,78 @@
+#contact {
+    padding: 10px 30px;
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.formWrapper,.addInfo{
+    width: 50%;
+    padding: 0 20px;
+
+}
+
+form > input ,form > textarea{
+    width: 100%;
+    margin: 10px;
+    outline: transparent;
+    padding-left: 10px;
+
+}
+
+.addInfo > p {
+    color: #c6c9d8bf;
+    margin: 10px auto;
+}
+
+.heading2{
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 10px auto;
+}
+
+.addInfo > ul {
+    list-style-type: none;
+
+}
+.addInfo > ul li{
+    margin: 20px auto;
+}
+.addInfo > ul li a {
+    color: #fff;
+    margin: 10px;
+    text-decoration: none;
+    position: relative;
+}
+
+.addInfo > ul li a::before {
+    content: ""; /* Empty content */
+    position: absolute; /* Position absolutely relative to the parent (the link) */
+    bottom: -10px; /* Position it slightly below the text */
+    left: 0; /* Start from the left edge */
+    width: 100%; /* Extend the underline across the link's width */
+    height: 2px; /* Set the height of the underline */
+    background-color: #f9004d; /* Color of the underline */
+    transform: scaleX(0); /* Initially, make the underline invisible */
+    transform-origin: 0 100%; /* Set the transformation origin to the left */
+    transition: transform 0.3s ease-in-out; /* Smooth scaling animation */
+}
+.addInfo > ul li a:hover::before {
+transform: scaleX(1); /* Scale the underline to full width on hover */
+}
+
+
+@media screen and (max-width: 768px) {
+    /* Styles for screens with a maximum width of 768px */
+
+    #contact {
+        flex-wrap: wrap-reverse;
+    }
+    .formWrapper,.addInfo{
+        width: 90%;
+        padding: 0 20px;
+
+    
+    }
+  }

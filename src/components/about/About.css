@@ -1,0 +1,48 @@
+#about {
+    width: 100%;
+  
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px
+}
+
+.imgWrapper{
+
+    object-fit: cover;
+    
+}
+
+.aboutmeSummary {
+    color: #fff;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px
+}
+
+.infoText{
+    color: #f9004d;
+}
+
+.education-certificationSummary > h3 {
+    color: #c6c9d8bf;
+
+    
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    /* Styles for screens with a maximum width of 768px */
+    .aboutmeSummary {
+      width: 80%;
+      /* border:1px solid red; */
+      padding-bottom: 10px;
+      
+    }
+  }

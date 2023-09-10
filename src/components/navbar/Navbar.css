@@ -1,0 +1,150 @@
+header {
+  width: 100%;
+  height: 10vh;
+  backdrop-filter: blur(5px);
+  background-color: transparent;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px 20px;
+  position: fixed;
+  z-index: 5;
+  top: 0%;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* === removing default button style ===*/
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 5px;
+  border: none;
+}
+
+/* button styling */
+.button {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255, 255, 255, 0.6);
+  --animation-color: #f754be;
+  --fs-size: 2em;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  text-wrap: nowrap;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button:hover .hover-text {
+  width: 120%;
+  filter: drop-shadow(0 0 23px var(--animation-color));
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links {
+  position: relative;
+  background-color: transparent;
+  border: transparent;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.nav-links::before {
+  content: ""; /* Empty content */
+  position: absolute; /* Position absolutely relative to the parent (the link) */
+  bottom: -2px; /* Position it slightly below the text */
+  left: 0; /* Start from the left edge */
+  width: 100%; /* Extend the underline across the link's width */
+  height: 2px; /* Set the height of the underline */
+  background-color: #f9004d; /* Color of the underline */
+  transform: scaleX(0); /* Initially, make the underline invisible */
+  transform-origin: 0 100%; /* Set the transformation origin to the left */
+  transition: transform 0.3s ease-in-out; /* Smooth scaling animation */
+}
+
+/* Add the hover effect */
+.nav-links:hover {
+  color: #f9004d; /* Change link color on hover */
+}
+
+.nav-links:hover::before {
+  transform: scaleX(1); /* Scale the underline to full width on hover */
+}
+
+.cvLink a {
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #f2f2f2;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.cvLink a:hover {
+  background-color: #f6004c;
+  border: 1px solid #f6004c;
+  padding: 9px 20px;
+}
+
+/* 
+@media screen and (max-width: 768px) {
+ 
+
+} */
+
+
+
+/* Media query for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+  header {
+
+    width: 100%;
+
+    justify-content: center;
+  
+  }
+
+
+  .nav-links {
+      display: none;
+  }
+
+  .cvLink {
+    margin-top: 10px; 
+    margin-left: -30px;
+  }
+}
+
+/* Media query for screens with a maximum width of 480px */
+@media (max-width: 480px) {
+  header {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+}

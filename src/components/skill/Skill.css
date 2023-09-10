@@ -1,0 +1,12 @@
+#skills > h2 {
+    text-align: center;
+    
+}
+
+.skillWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 20px
+}

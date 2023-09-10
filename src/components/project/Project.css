@@ -1,0 +1,20 @@
+#project {
+    color: #fff;
+}
+.projectheading{
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.projectheading > p{
+    color: #c6c9d8bf;
+}
+
+.projectsWrapper {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 20px
+}

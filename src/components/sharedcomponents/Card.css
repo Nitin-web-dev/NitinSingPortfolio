@@ -1,0 +1,36 @@
+.card-wrapper {
+  max-width: 30%;
+
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+.imgWrapper img {
+  /* width: 100%; */
+}
+.imgWrapper {
+  object-fit: cover;
+}
+.card-wrapper:hover {
+  box-shadow: rgba(101, 100, 100, 0.25) 0px 54px 55px,
+    rgba(128, 119, 119, 0.12) 0px -12px 30px,
+    rgba(154, 148, 148, 0.12) 0px 4px 6px,
+    rgba(162, 150, 150, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.card-wrapper > h2 {
+  text-transform: capitalize;
+}
+.card-wrapper > p {
+  color: #c6c9d8bf;
+  text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+  /* Styles for screens with a maximum width of 768px */
+  .card-wrapper {
+    min-width: 80%;
+  }
+}

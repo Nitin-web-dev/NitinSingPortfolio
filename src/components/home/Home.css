@@ -1,0 +1,75 @@
+#home {
+    position: relative;
+
+}
+
+.bg-home {
+    background-image: url('https://img.freepik.com/free-photo/artistic-blurry-colorful-wallpaper-background_58702-8622.jpg?size=626&ext=jpg&ga=GA1.2.406399251.1694354313&semt=ais');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 90%;
+    height: 90vh;
+    padding: 0 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-53%,-50%);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+ 
+.textWrapper{
+    border: 1px solid transparent;
+    box-shadow: rgba(100, 100, 100, 0.24) 0px 3px 8px;
+
+    width: 60%;
+    padding: 30px;
+
+    backdrop-filter: blur(50px);
+
+
+}
+    
+.heading {
+    color: #fff;
+    font-size: 3rem;
+}
+
+@keyframes textAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    25% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    75% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+  }
+
+  /* Apply the animation to the text element */
+  .animated-text {
+    animation: textAnimation 6s linear infinite; /* Adjust the duration as needed */
+    display: inline-block;
+    font-size: 3rem;
+    color: #f9004d;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    /* Styles for screens with a maximum width of 768px */
+    .textWrapper {
+      width: 99%;
+      overflow: hidden;
+    }
+  }
